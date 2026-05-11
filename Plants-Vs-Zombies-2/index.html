@@ -88,9 +88,15 @@
 <body>
   <div id="GameDiv" cc_exact_fit_screen="true">
     <div id="Cocos3dGameContainer">
-      <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="99"></canvas>
+      <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
     </div>
   </div>
+
+  <script>
+    document.getElementById("GameCanvas").addEventListener("mousedown", function() {
+        window.focus();
+    });
+  </script>
 
   <div id="splash">
     <div class="splash-content">
